@@ -25,8 +25,16 @@ SECRET_KEY = 'uo@cx)-8&w-46rwp0e)*_!$o9dd^&84zmo!%5g5&7p*c@=^+_y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
+
+
+# from decouple import config
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('DATABASE_URL')
+#     )
+# }
 
 # Application definition
 
@@ -38,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
-    'contacts.apps.ContactsConfig'
+    'contacts.apps.ContactsConfig',
 
 ]
 
@@ -82,7 +90,8 @@ DATABASES = {
         'NAME': 'thunderbolt',
         'USER':'postgres',
         'PASSWORD':'root@09',
-        'HOST':'localhost',
+        'HOST':'db',
+        'PORT':5432,
     }
 }
 
