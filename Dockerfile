@@ -13,4 +13,3 @@ RUN ls
 #Depedencies Installed Now Lets Copy All Files To Working Diretory
 #ENV NAME Thunder
 
-CMD ["python","manage.py","makemigrations"]
